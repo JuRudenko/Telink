@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='F:/proj/.metadata'
+let g:netrw_dirhist_2='F:\proj\.metadata'
+let g:netrw_dirhist_3='c:/users/peters/desktop/gcc-4.5.1/.svn'
+let g:netrw_dirhist_4='c:\users\peters\desktop\gcc-4.5.1\.svn'
+let g:netrw_dirhist_5='c:/users/peters/desktop/gcc-4.5.1'

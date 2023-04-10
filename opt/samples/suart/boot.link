@@ -1,0 +1,37 @@
+SECTIONS
+{
+	. = 0x0;
+        .vectors :
+        {
+        *(.vectors)
+        }
+
+        .text :
+        {
+        *(.text)
+        }
+
+        .rodata :
+        {
+        *(.rodata*)
+        }
+	PROVIDE(_dstored_ = .);
+	
+        .data :
+         {
+         PROVIDE(_start_data_ = . );
+         *(.data); 
+         PROVIDE(_end_data_ = . );  
+         }
+
+	PROVIDE(_code_size_ = .);
+
+	. = 0x809800;
+        .bss :
+        {
+	PROVIDE(_start_bss_ = .);
+        *(.sbss)
+        *(.bss)
+        }
+	PROVIDE(_end_bss_ = .);
+}

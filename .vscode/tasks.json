@@ -1,0 +1,58 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Evk",
+            "type": "process",
+            "command": "D:/TB/BDT/release_v5.4.7/Telink BDT.exe",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Monitor",
+            "type": "process",
+            "command": "C:/Users/admin/Downloads/Telegram Desktop/Terminal.exe",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Make Build",
+            "type": "shell",
+            "command": "make",
+            "options": {
+                "cwd": "${workspaceRoot}/"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Flasher",
+            "type": "shell",
+            "command": "make flash",
+            "options": {
+                "cwd": "${workspaceRoot}/"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Flasher erase",
+            "type": "shell",
+            "command": "make erase-flash",
+            "options": {
+                "cwd": "${workspaceRoot}/"
+            },
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}
